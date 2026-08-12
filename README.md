@@ -20,9 +20,9 @@ The project periodically toggles an LED on pin **PA5** by forcing **EXTI0** and 
 
 ## 🛠 Hardware & Software Requirements
 
-* **Microcontroller:** STM32F4 series (e.g., NUCLEO-F446RE, NUCLEO-F401RE, or STM32F4 Discovery)
-* **IDE / Toolchain:** Keil uVision MDK-ARM (v5.x or higher) / Arm GNU Toolchain
-* **Debugger:** ST-Link V2/V3
+* **Microcontroller:** STM32 NUCLEO-F446RE
+* **IDE / Toolchain:** Keil uVision MDK-ARM / Arm GNU Toolchain
+* **Debugger:** ST-Link
 * **Onboard Hardware:** User LED connected to **PA5**
 
 
