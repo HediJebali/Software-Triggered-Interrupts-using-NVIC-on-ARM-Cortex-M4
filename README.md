@@ -26,27 +26,4 @@ The project periodically toggles an LED on pin **PA5** by forcing **EXTI0** and 
 * **Onboard Hardware:** User LED connected to **PA5**
 
 
-[ main() Starts ]
-              │
-   Configure GPIOA Pin 5 (Output)
-              │
-   Configure & Enable SysTick Timer
-              │
-   Set Priorities & Enable NVIC IRQs
-              │
-    ┌─────────┴─────────┐
-    │    Infinite Loop  │ ◄─────────────────────────┐
-    └─────────┬─────────┘                           │
-              │                                     │
- 1. Trigger EXTI0 via ISPR ────► EXTI0_IRQHandler() │
-    (Set Pending Bit)            └─► Set PA5 HIGH   │
-              │                                     │
- 2. Delay 1000 ms via SysTick                       │
-              │                                     │
- 3. Trigger EXTI1 via STIR ────► EXTI1_IRQHandler() │
-    (Software Trigger Register)  └─► Set PA5 LOW    │
-              │                                     │
- 4. Delay 1000 ms via SysTick                       │
-              └─────────────────────────────────────┘
-
 
